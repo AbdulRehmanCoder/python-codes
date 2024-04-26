@@ -1,0 +1,14 @@
+#Write a function that takes a number `n` as input and returns the first `n` numbers in the Fibonacci sequence.
+#Fibonacci Sequence : The Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones.
+
+def fibonacci_series(n):
+    fib_series = [0,1]
+    for number in range(n):
+        next_term = fib_series[-1] + fib_series[-2]    #for next term,use negative indeexing to give last and 2nd last element.
+        fib_series.append(next_term)
+    return fib_series
+
+
+n = 10
+fib_series = fibonacci_series(n)
+print(f"The Fibonacci Series is : {fib_series}.")
